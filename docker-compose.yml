@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  ubuntu_usb_A:
+    container_name: USB_A
+    image: ubuntu_usb
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - "/dev:/dev"
+    privileged: true
+
+
+  ubuntu_usb_B:
+    container_name: USB_B
+    image: ubuntu_usb
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - "/dev:/dev"
+    privileged: true
